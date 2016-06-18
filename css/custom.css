@@ -1,0 +1,179 @@
+﻿/*	fonts
+	font-family: 'Roboto', sans-serif !important;
+	font-family: 'Playfair Display', serif !important;
+	font-family: 'Hammersmith One', sans-serif !important;
+*/
+*{padding: 0px; margin: 0px; list-style-type: none;}
+body{padding: 0px;}
+header{background-image: url("/images/headerbg.png"); height: 650px; color: white;}
+header a:visited, header a:link, footer a:visited, footer a:link{color: white; text-decoration: none; transition: 0.8s;}
+a.button:visited, a.button:link{color: #00e0d0 !important;}
+a.button:hover{color: white !important;}
+a:hover{color: #00e0d0;}
+
+/*reusable classes*/
+.container{padding-bottom: 0px; width: 1200px; margin: 0 auto; position: relative;} /*Container for the website*/
+.flex{display: flex; justify-content: space-around;} /*Putting blocks next to eachother*/
+.active{color: #00e0d0 !important;}
+.button{font-family: 'Hammersmith One', sans-serif !important; background-color: transparent; background-repeat: none; cursor: pointer; color: #00e0d0; border: solid 1px #00e0d0; padding: 10px 20px 10px 20px; border-radius: 2px; margin-top: 50px; transition: 0.5s;}
+.button:hover{background-color: #00e0d0; color: white;}
+.contentH1{margin-bottom: 20px;}
+
+/*menu*/
+header{padding-top: 10px;}
+header nav{font-family: 'Roboto', sans-serif !important; line-height: 50px;}
+header nav ul{list-style-type: none; margin: 0px; padding: 0px;}
+header nav li{display: inline-block; color: white; margin: 10px;}
+header #menuKnop{display: none;}
+header.headerSubpage {height: 360px; background-position: 0px -300px;}
+
+/*header text*/
+header h3{font-family: 'Playfair Display', serif !important;}
+header p{font-family: 'Roboto', sans-serif !important; font-weight: 300; width: 700px; line-height: 25px;}
+header center {margin-top: 10%;}
+header hr{margin-top: 25px; margin-bottom: 25px;}
+header #text{margin-top: 0%;}
+
+/*about section*/
+#about{padding-top: 80px; padding-bottom: 80px; font-family: 'Roboto', sans-serif !important; color: #333333; margin-top: 10px;}
+#about input.button{margin-top: 5px; margin-bottom: 5px;}
+#about h1{font-family: 'Playfair Display', serif !important; font-style: bold; font-weight: 700; color: #413d4b;}
+#aboutP{font-family: 'Roboto', sans-serif !important; width: 600px; color: #333333;}
+#about div{font-family: 'Roboto', sans-serif !important; color: #333333; margin-top: 10px;}
+#about .flex div{padding: 15px; background-color: #f5f5f5; border-radius: 5px;}
+#about .flex div p{width: 300px; text-align: justify;}
+#about .flex div img{width: 200px; margin-bottom: 10px;}
+
+/*video section*/
+#video{background-repeat: none; background-image: url("/images/video.png"); min-height: 550px;}
+#video img{margin-top: 240px;}
+
+/*expertise section*/
+#expertise{padding-top: 80px;}
+#expertise h1{font-family: 'Playfair Display', serif !important; color: #413d4b;}
+#expertise > :first-child > p{font-family: 'Playfair Display', serif !important; margin-top: 10px; margin-bottom: 20px;}
+#expertise > :first-child > hr{margin-bottom: 60px;}
+#expertise .flex{text-align: center;}
+#expertise .flex div{width: 300px; margin-bottom: 80px;}
+#expertise .flex p{font-family: 'Roboto', sans-serif !important; color: #333333;}
+#expertise .flex > div > :nth-child(2){margin-top: 20px; margin-bottom: 20px;}
+
+/*team section*/
+#team{background-image: url("/images/teambg.png"); background-repeat: none; min-height: 550px; padding-top: 40px; padding-bottom: 40px; color: white;}
+#team .container > :first-child {font-family: 'Playfair Display', serif !important;}
+#team .container > :first-child p{margin-top: 10px; margin-bottom: 20px;}
+#team .flex {margin-top: 50px; font-family: 'Roboto', sans-serif !important; font-weight: 300; font-size: 15px;}
+#team .flex img{width: 240px; height: 200px;}
+#team .flex div{background-color: transparent; border: solid 1px #636363; text-align: center; width: 240px;}
+#team .flex p{margin-top: 20px; margin-bottom: 20px;}
+#team .container > :nth-child(3) > p {font-family: 'Roboto', sans-serif !important; font-weight: 300; margin-top: 50px;}
+#team .container > :nth-child(3) > button{margin-top: 20px !important;}
+
+/*works section*/
+#works {margin-top: 80px; margin-bottom: 80px;}
+#works .container h1{font-family: 'Playfair Display', serif !important;}
+#works .container p{font-family: 'Roboto', sans-serif !important;}
+#works .container {color: #413d4b; margin-bottom: 80px;}
+
+/*testimonials section*/
+#testimonials{padding-top: 80px; padding-bottom: 40px; background-repeat: none; background-image: url("/images/testimonialsbg.png"); color: white;}
+#testimonials .container > :first-child > :nth-child(2) {font-family: 'Playfair Display', serif !important; width: 800px; margin-top: 45px; margin-bottom: 45px;}
+#testimonials .container > :first-child > :not(:nth-child(2)) {font-family: 'Roboto', sans-serif !important;}
+#testimonials .flex{justify-content: center; margin-top: 40px;}
+#testimonials .flex img{cursor: pointer;}
+#testimonials .flex > :not(:nth-child(4)){height: 40px; margin-top: 10px; margin-right: 10px;}
+#testimonials .flex > :nth-child(4){height: 60px; margin-right: 10px;}
+#testimonials .flex > :first-child{height: 20px; margin-top: 20px; margin-right: 25px;}
+#testimonials .flex > :last-child{height: 20px; margin-top: 20px; margin-left: 5px;}
+
+/*contact section*/
+#contact{padding-top: 50px; padding-bottom: 50px; min-height: 500px; font-family: 'Playfair Display', serif !important; padding-left: 10px; padding-right: 5px;}
+#contact h1{margin-bottom: 40px; color: #413d4b;}
+#contact input[type="text"]{padding: 10px; width: 85%; border: solid 1px #c2c2c2; color: #c2c2c2; margin-top: 20px;}
+#contact input[placeholder="Name"]{margin-top: 0px;}
+/*#contact input[value="Your Message"]{padding-bottom: 200px;}*/
+#contact textarea{max-width: 86.7%; min-width: 85%; padding: 10px; min-height: 150px; max-height: 250px; margin-top: 20px;}
+#contact .button{margin-top: 20px;}
+
+/*footer*/
+footer{background-image: url("/images/footerbg.png"); background-repeat: none; padding-top: 80px; padding-bottom: 80px; color: white; font-family: 'Roboto', sans-serif !important; font-weight: 300;}
+footer .container > :first-child > div{width: 300px;}
+footer input[type="text"]{padding: 14px 20px 14px 20px; margin-right: 10px; background-color: transparent; color: white; border: solid 1px #c2c2c2; float: left;}
+footer input[type="image"]{padding: 10px 20px 10px 20px; opacity: 0.4; background-color: white;}
+footer input[type="image"]:hover{opacity: 0.7;  transition: 0.5s;}
+footer img[src*="gps.png"], footer img[src*="phone.png"]{float: left; margin-right: 20px; padding-bottom: 30px;}
+footer h3, footer img[src*="logo.png"]{margin-bottom: 30px;}
+footer h3{margin-top: 25px;}
+footer img[src*="images/social media/"]{margin-top: 20px; margin-right: 10px;}
+footer ul{list-style-type: none; margin: 0px; padding: 0px;}
+footer li{display: inline-block; margin: 10px;}
+footer .flex{justify-content: space-between;}
+footer .container > :last-child{margin-top: 50px;}
+
+/*products*/
+.products div{width: 300px; position: relative; height: 250px;}
+.products div ul{list-style-type: none;}
+.products div ul spam{float: right;}
+.products div p{position: absolute; bottom: 10px; left: 250px;}
+.products div input.button{position: absolute; bottom: 15px; left: 15px;}
+#thankYouForm{width: 600px; height: 360px;}
+#thankYouForm li{margin: 10px;}
+#thankYouForm input[type="text"], #thankYouForm input[type="tel"]{padding: 10px; width: 85%; border: solid 1px #c2c2c2; color: black; margin-bottom: 10px; font-family: 'Roboto', sans-serif !important;}
+#thankYouForm textarea{max-width: 85%; min-width: 85%; padding: 10px; min-height: 150px; max-height: 150px; font-family: 'Roboto', sans-serif !important;}
+#thankYouForm input[type="submit"]{margin-top: 20px;}
+
+/*Accounts*/
+.accounts{width: 100%; text-align: left;}
+.accounts td, #customers th{padding: 10px;}
+.accounts tr:nth-child(even){background-color: #f5f5f5;}
+.accounts tr:nth-child(odd){background-color: white;}
+
+/*CMS*/
+.CMS #content_PageName {color: #00e0d0; border: solid 1px #00e0d0; padding: 10px 20px 10px 20px; border-radius: 2px; transition: 0.5s; font-family: 'Hammersmith One', sans-serif !important; cursor: pointer;}
+.CMS #content_PageName option{padding: 50px; color: #00e0d0;}
+.CMS input[type="text"]{padding: 10px; width: 172px;}
+.CMS input.button{margin-top: 0px;}
+.CMS input[value="Update Text"]{float: right;}
+
+/*Login*/
+.login input[type="text"], .login input[type="password"]{padding: 10px; margin-bottom: 10px; width: 100%;}
+.login input.button{margin-top: 0px;}
+/*logout*/
+.logout input.button{margin-top: 0px;}
+
+/*Register*/
+.register input[type="text"], .register input[type="password"]{padding: 10px; margin-bottom: 10px; width: 100%;}
+
+/*account info in home page*/
+#accountInfo{background-color: #00e0d0; padding-top: 20px; padding-bottom: 20px; color: white; font-family: 'Roboto', sans-serif !important;}
+
+@media screen and (max-width: 75em) {
+	.container{width: 100%;}
+
+	/*flex*/
+	header .flex, #about.flex{flex-direction: column;}
+	#expertise .flex, #team .flex, footer .flex{flex-wrap: wrap;}
+
+	/*header*/
+	header .flex, #about > :last-child{text-align: center;}
+	header p, #testimonials .container > :first-child > :nth-child(2){width: 50%;}
+
+	/*about section*/
+	#about{align-items: center;}
+	#about img{width: 20%;}
+	#about p{width: 100%; padding-left: 5px; padding-right: 5px;}
+}
+
+@media screen and (max-width: 45em) {
+	/*menu*/
+	header #menuKnop {display: block; width: 97%; background-color: transparent; cursor: pointer; color: #00e0d0; border: solid 1px #00e0d0; padding: 10px 20px 10px 20px; border-radius: 2px; transition: 0.5s;}
+	header #menu {display: none;}
+	header #menu ul {float: none; text-align: center;}
+	header #menu li {float: none; display: block; background-color: transparent; background-repeat: none; color: #00e0d0; border: solid 1px #00e0d0; border-radius: 2px; transition: 0.5s;}
+	header #menu li:hover{background-color: #00e0d0; color: white;}
+	header #menu li a:hover{color: white !important;}
+}
+
+@media screen and (max-width: 570px) {
+	header p, #testimonials .container > :first-child > :nth-child(2){width: 90%;}
+}

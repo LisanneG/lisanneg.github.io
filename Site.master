@@ -1,0 +1,215 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeFile="Site.master.vb" Inherits="SiteMaster" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <link href="~/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" href="/Content/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+	<script type="text/javascript" src="/js/custom.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <form runat="server">
+	    <header <%If Not HttpContext.Current.Request.Url.AbsolutePath Like "/default.aspx" Then %>class="headerSubpage"<%End If %> >
+		    <div class="container">
+			    <div class="flex">
+				    <a href="/"><img src="/images/logo.png"></a>
+				    <center><button type="button" id="menuKnop">&#9776;</button></center>
+				    <nav id="menu">
+					    <ul>
+                            <asp:ContentPlaceHolder ID="menu" runat="server"></asp:ContentPlaceHolder>
+					    </ul>
+				    </nav>
+			    </div>
+                <%If HttpContext.Current.Request.Url.AbsolutePath Like "/default.aspx" Then %>
+                    <center>
+                    <h1>We Are Awesome Creative Agency</h1>
+				    <hr color="#00e0d0" width="60px">
+				    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+				    <button class="button">LEARN MORE</button>
+                <%Else %>
+                    <center id="text">
+                    <h1>Tajam - Lisanne Gerrits</h1>
+                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                    <%End If %>
+			    </center>
+		    </div>
+	    </header>
+
+	    
+        <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+
+        <%If HttpContext.Current.Request.Url.AbsolutePath Like "/default.aspx" Then %>
+            <section id="video">
+                <center><a href="#"><img src="/images/video icon.png"></a></center>
+            </section>
+            <section id="expertise" class="container">
+	            <center>
+		            <h1>EXPERTISE</h1>
+			        <p>Lorem ipsum dolor sit amet proin gravida nibn vel velit</p>
+			        <hr width="60px">
+		        </center>
+		        <div class="flex">
+		            <div>
+			            <img src="/images/icon/screen.png">
+				        <p><b>WEB DESIGN &amp; DEVELOPMENT</b></p>
+				        <p>This is Photoshop's version of Lorem ipsum. Proin gravida nibm vel velit auctor aliquer aenean</p>
+			        </div>
+		            <div>
+				         <img src="/images/icon/brush.png">
+				         <p><b>BRANDING IDENTITY</b></p>
+				         <p>This is Photoshop's version of Lorem ipsum. Proin gravida nibm vel velit auctor aliquer aenean</p>
+			        </div>
+			        <div>
+				         <img src="/images/icon/phone2.png">
+				         <p><b>MOBILE APP</b></p>
+				         <p>This is Photoshop's version of Lorem ipsum. Proin gravida nibm vel velit auctor aliquer aenean</p>
+			        </div>
+		        </div>
+		        <div class="flex">
+		            <div>
+				        <img src="/images/icon/circle.png">
+				        <p><b>SEARCH ENGINE OPTIMIZATION</b></p>
+				        <p>This is Photoshop's version of Lorem ipsum. Proin gravida nibm vel velit auctor aliquer aenean</p>
+			        </div>
+		            <div>
+				        <img src="/images/icon/game.png">
+				        <p><b>GAME DEVELOPMENT</b></p>
+				        <p>This is Photoshop's version of Lorem ipsum. Proin gravida nibm vel velit auctor aliquer aenean</p>
+			        </div>
+			        <div>
+				        <img src="/images/icon/heart.png">
+				        <p><b>MADE WITH LOVE</b></p>
+				        <p>This is Photoshop's version of Lorem ipsum. Proin gravida nibm vel velit auctor aliquer aenean</p>
+			        </div>
+		        </div>
+            </section>
+            <section id="team">
+		        <div class="container">
+		            <center>
+		                <h1>MEET OUR AMAZING TEAM</h1>
+		                <p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+		                <hr width="60px">
+			        </center>
+			        <div class="flex">
+				        <div>
+					        <img src="/images/team/me2.jpg">
+					        <p><b>LISANNE GERRITS</b><br>SITE MAKER</p>
+				        </div>
+				        <div>
+			                <img src="/images/team/me2.jpg">
+					        <p><b>LISANNE GERRITS</b><br>SITE MAKER</p>
+				        </div>
+				        <div>
+					        <img src="/images/team/me2.jpg">
+					        <p><b>LISANNE GERRITS</b><br>SITE MAKER</p>
+				        </div>
+				        <div>
+					        <img src="/images/team/me2.jpg">
+					        <p><b>LISANNE GERRITS</b><br>SITE MAKER</p>
+				        </div>
+			         </div>
+			         <center>
+			            <p>Become part of our dream team, let's join us!</p>
+				        <button class="button">WE ARE HIRING</button>
+			         </center>
+		        </div>
+            </section>
+
+	        <section id="works">
+	            <div class="container flex">
+		            <h1>OUR WORKS</h1>
+			        <p>See All Projects in Dribble ></p>
+		        </div>
+		        <center><button class="button">LOAD MORE</button></center>
+	        </section>
+
+            <section id="testimonials">
+                <div class="container">
+                    <center><img src="/images/quote.png">
+                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+			
+                    <p><b>JANE GALADRIEL</b></p>
+                    <p>GEO TENGKUREP</p>
+		            <div class="flex">
+			            <img src="/images/slider/arrowBackward.png">
+			            <img src="/images/slider/1.png">
+			            <img src="/images/slider/2.png">
+			            <img src="/images/slider/4.png">
+			            <img src="/images/slider/5.png">
+			            <img src="/images/slider/6.png">
+                        <img src="/images/slider/arrowForward.png">
+		            </div>
+		            </center>
+	            </div>
+            </section>
+
+            <section id="contact" class="container">
+                <h1>GIVE US SOME GOOD NEWS</h1>
+                <form>
+                    <input type="text" placeholder="Name"><br>
+			        <input type="text" placeholder="Email"><br>
+			        <input type="text" placeholder="Subject"><br>
+			        <textarea name="comment" placeholder="Your Message ..."></textarea><br>
+			        <input type="submit" value="SUBMIT" class="button">
+		        </form>
+	        </section>
+        <%End If %>
+
+        <%If Session("login") = True Then %>
+            <section id="accountInfo">
+                <div class="container">
+                    <h3>You are logged in as <%Response.Write(Session("username")) %></h3>
+                </div>
+            </section>
+        <%End If %>
+
+	    <footer>
+		    <div class="container">
+			    <div class="flex">
+				    <div>
+					    <img src="/images/logo.png">
+					    <p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
+				    </div>
+				    <div>
+					    <h3>OUR STUDIO</h3>
+					    <img src="/images/icon/gps.png"><p>Ruko cucruk, Jl. Radio luar dalem jos No. 12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</p>
+					    <br>
+					    <img src="/images/icon/phone.png"><p>(+62) 21-2224 3333</p>
+				    </div>
+				    <div>
+					    <h3>STAY IN TOUCH</h3>
+					    <form>
+						    <input type="text" value="Subscribe to our newsletter">
+						    <input type="image" src="/images/icon/paperplane.png" alt="Submit">
+					    </form>
+					    <a href="https://www.facebook.com"><img src="/images/social media/facebook.png"></a>
+					    <a href="https://www.twitter.com"><img src="/images/social media/twitter.png"></a>
+					    <a href="https://www.dribbble.com"><img src="/images/social media/dribbble.png"></a>
+					    <a href="https://www.instagram.com"><img src="/images/social media/instagram.png"></a>
+					    <a href="https://www.google.com"><img src="/images/social media/googlePlus.png"></a>
+					    <a href="https://www.youtube.com"><img src="/images/social media/youtube.png"></a>
+				    </div>
+			    </div>
+			    <div class="flex">
+				    <ul>
+					    <li><a href="#">HELP</a></li>
+					    <li><a href="#">TERMS &amp; CONDITIONS</a></li>
+					    <li><a href="#">PRIVACY</a></li>
+				    </ul>
+				    <p>Copyright &copy; 2016 - Lisanne Gerrits</p>
+			    </div>
+		    </div>
+	    </footer>
+    </form>
+</body>
+</html>
